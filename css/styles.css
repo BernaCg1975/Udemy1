@@ -1,0 +1,265 @@
+/* Globales*/
+
+:root{
+    --blanco: #ffffff;
+    --ocuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisclaro: #dfe9f3;
+    --fuente-principal: 3.1rem;
+}   
+
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* hack para box model*/
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/*Efectos de Scroll*/
+
+.servicio, .navegacion-principal, .formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+} 
+
+
+
+
+ body{
+     font-size: 16px;
+     font-family:'Krub', sans-serif;
+     background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+
+ } /** 1rem = 10px Escribiendo la line de codigo inicial **/
+
+ 
+.btn{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+ 
+@media (min-width: 768px) {
+    .btn{
+        width: auto;
+    }
+}
+ .btn:hover{
+     cursor: pointer;
+ }
+
+.sombra{
+    -webkit-box-shadow: -1px 7px 32px 0px rgba(143,143,143,1);
+    -moz-box-shadow: -1px 7px 32px 0px rgba(143,143,143,1);
+    box-shadow: -1px 7px 32px 0px rgba(143,143,143,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+/* Tipogarfia */
+
+ h1{
+     font-size: 3.8rem;
+
+ }
+ h2 {
+    font-size: 2.8rem;
+}
+ h3{
+   font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+/* Titulos */
+
+ .titulo span{
+      font-size:2rem ;
+
+  }
+
+  .contenedor{
+      max-width: 120rem;
+      margin: 0 auto 0 auto;
+  }
+
+
+/* Utilidades */
+
+.w-100{
+    width: 100%;
+}
+
+
+/* Navegacion Principal*/
+
+  .nav-bg{
+      background-color: var(--secundario);
+  }
+
+  .navegacion-principal{
+      display: flex;
+      justify-content: space-evenly;
+     
+  }
+
+  @media (max-width: 768px) {
+     .navegacion-principal{
+      flex-direction: column;
+      align-items: center;
+      
+     }
+     .navegacion-principal a:hover {
+         background-color: var(--primario);
+         width:100%;
+         text-align: center;
+         
+     }
+        
+  }
+    
+
+
+  .navegacion-principal a {
+     
+     color: var(--blanco);
+     text-decoration: none;
+     font-size: 2rem;
+     font-weight: bold;
+     padding: 1rem;
+     
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color:var(--ocuro);
+}
+
+/* Hero */
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+   position: absolute;
+   background-color: rgba(0,0,0, 0.5);
+  /** background-color: rgb( 0 0 0 / 70%);*/
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+
+@media (min-width: 768px ) {
+    
+
+.servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; /*es igual a dividir 33*/
+    column-gap: 2rem;
+ }
+
+}
+
+
+.servicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio h3{
+ color: var(--secundario);
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .icono{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem, 100%); /**Utiliza el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+ }
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-campos{
+
+}
+
+.campo{
+  margin-bottom: 1rem;
+}
+
+.campo label{
+  color: var(--blanco);
+  font-weight: 700;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.input-text{
+    width: 100%;
+}
+
+.enviar .btn{
+    width: 100%;
+}
